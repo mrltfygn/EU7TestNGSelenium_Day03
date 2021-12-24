@@ -25,5 +25,6 @@ public class OpenBrowser {
       //  driver.get("https://google.com");
       // changed something in git
         System.out.println("Try something");
+        System.out.println("Added a line");
     }
 }
