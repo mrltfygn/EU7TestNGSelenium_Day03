@@ -39,4 +39,42 @@ public class ActionTest {
         Assert.assertTrue(viewLink.isDisplayed(),"Link is displayed");
 
     }
+    @Test
+    public void dragAndDrop() throws InterruptedException {
+        driver.get("https://demos.telerik.com/kendo-ui/dragdrop/index");
+        driver.manage().window().maximize();
+
+        Actions actions=new Actions(driver);
+
+        WebElement source=driver.findElement(By.id("draggable"));
+        WebElement target=driver.findElement(By.id("droptarget"));
+
+         driver.findElement(By.id("onetrust-accept-btn-handler")).click();
+
+        Thread.sleep(2000);
+
+        actions.dragAndDrop(source,target).perform();
+
+
+    }
+
+    @Test
+    public void dragAndDropChaining() throws InterruptedException {
+        driver.get("https://demos.telerik.com/kendo-ui/dragdrop/index");
+        driver.manage().window().maximize();
+
+        Actions actions=new Actions(driver);
+
+        WebElement source=driver.findElement(By.id("draggable"));
+        WebElement target=driver.findElement(By.id("droptarget"));
+
+        driver.findElement(By.id("onetrust-accept-btn-handler")).click();
+
+        Thread.sleep(2000);
+
+        // same way like  drag and drop
+        actions.moveToElement(source).clickAndHold().moveToElement(target).release().perform();
+
+
+    }
 }
