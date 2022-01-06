@@ -73,7 +73,7 @@ public class ActionTest {
         Thread.sleep(2000);
 
         // same way like  drag and drop
-        actions.moveToElement(source).clickAndHold().moveToElement(target).release().perform();
+        actions.moveToElement(source).clickAndHold().moveToElement(target).pause(2000).release().perform();
 
 
     }
