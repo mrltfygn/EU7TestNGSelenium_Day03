@@ -16,7 +16,7 @@ public class dropdown_Webelement {
     WebDriver driver= WebDriverFactory.getDriver("Chrome");
     @BeforeMethod
     public void setUp(){
-        WebDriver driver= WebDriverFactory.getDriver("Chrome");
+        driver= WebDriverFactory.getDriver("Chrome");
 
     }
 
@@ -25,31 +25,41 @@ public class dropdown_Webelement {
         WebDriver driver= WebDriverFactory.getDriver("Chrome");
         driver.get("http://practice.cybertekschool.com/dropdown");
        //1.Locate your dropdownElement just like the other web element with unique locator
+
         WebElement dropdownElement=driver.findElement(By.id("state"));
       //2.Create select objec by passing element that element as a constructor
+
         Select stateDropdown=new Select(dropdownElement);
       //3.getOption -->return all available option from dropdown
+
         List<WebElement> options = stateDropdown.getOptions();
       //4.print size of option
+
         System.out.println("options.size() = " + options.size());
       //5.print option one by one
+
         for (WebElement option : options) {
             System.out.println("option.getText() = " + option.getText());
         }
+    }
 
         @Test
-        public void test2(){
+        public void test2() throws InterruptedException {
             driver.get("http://practice.cybertekschool.com/dropdown");
+
             //1.Locate your dropdownElement just like the other web element with unique locator
             WebElement dropdownElement2= driver.findElement(By.id("state"));
+
             //2.Create select object by passing element that element as a constructor
-            Select stateDropdown2=new Select(dropdownElement);
+            Select stateDropdown2=new Select(dropdownElement2);
 
             //verify that fist selection is Select a stage
             String expected="Select a Stage";
             String actualOption=stateDropdown2.getFirstSelectedOption().getText();
+
             Assert.assertEquals(actualOption,expected,"verify your fist selection");
             Thread.sleep(5000);
+
             //1) HOW WE SELECT FROM DROPDOWN?
             stateDropdown2.selectByVisibleText("Virginia");//select using visible text
             String expected2="Virginia";
@@ -64,25 +74,13 @@ public class dropdown_Webelement {
 
             //3) SELECT USING VALUE
             stateDropdown2.selectByValue("TX");
-            String expected="Texas";
-            String actualOption=stateDropdown2.getFirstSelectedOption().getText();
-            Assert.assertEquals(actualOption,expected,"verify your fist selection");
+            String expected4="Texas";
+            String actualOption4=stateDropdown2.getFirstSelectedOption().getText();
+            Assert.assertEquals(actualOption4,expected4,"verify your fist selection");
 
         }
-
-        @AfterMethod
-        public void tearDown() throws InterruptedException {
-
-
-        }
-            
-
-
-
-
-
 
 
 
     }
-}
+
