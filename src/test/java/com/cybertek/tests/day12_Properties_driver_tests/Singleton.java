@@ -1,5 +1,7 @@
 package com.cybertek.tests.day12_Properties_driver_tests;
 
+import org.testng.annotations.Test;
+
 public class Singleton {
     // singleton class  will have private constructor
     //it means other class
@@ -17,5 +19,10 @@ public class Singleton {
             System.out.println("it has value return same");
         }
         return str;
+
+
+
     }
+
+
 }
