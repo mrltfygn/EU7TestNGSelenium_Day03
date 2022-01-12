@@ -26,7 +26,7 @@ public class TestBase {
     }
     @AfterMethod
     public void tearDown() throws InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(8000);
         Driver.closeDriver();
     }
 }
