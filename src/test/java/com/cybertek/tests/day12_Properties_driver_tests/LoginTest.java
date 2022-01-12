@@ -20,5 +20,6 @@ public class LoginTest extends TestBase {
         driver.findElement(By.id("prependedInput")).sendKeys(username);
         driver.findElement(By.id("prependendInput2")).sendKeys(password);
 
+
     }
 }
