@@ -26,12 +26,38 @@ public class xPathLocator {
         button1.click();
 
         WebElement paragraphContains=driver.findElement(By.xpath("//p[contains(text(),'Here')]"));
-                            //
+                            //search p tag that contain 'Here'
+
+        WebElement startswithElement=driver.findElement(By.xpath("//button[starts-with(@id,'button')]"));
+        startswithElement.click();
+                            //search button and this tag has a dynamic id that id value start with this text
+
+        WebElement containsElement=driver.findElement(By.xpath("//button[contains(@id,'_button')][1]"));
+        startswithElement.click();
+                         //search button and this tag has a dynamic id that id value contains this text
 
 
+        WebElement childELementP=driver.findElement(By.xpath("//div[@id='content']/div[1]/p"));
 
+        //search div tag and this tag has id attribute value content child div of first one, child p
 
+        //Choosing between cousins(different parent, same name)
+        //  (your xpath formula)[index number]
 
+        //  **Locating with multiple attributes
+        // tagName[@attributeName1='value1'][@attributeName2='value2']
+        //tagName[@attributeName1='value1' and @attributeName2='value2']
+        //tagName[@attributeName1='value1' or @attributeName2='value2']
+
+        // **Locating parent from child:
+        //knownXpath/parent::parentName
+        //knownXpath/parent::*
+        //knownXpath/.. <-- Easiest way
+
+        //**Locating sibling:
+        //knownXpath/following-sibling::tagName
+        //knownXpath/preceding-sibling::tagName
+         //knownXpath/../tagName <-- Easiest way(child>parent>other child)
 
     }
 
