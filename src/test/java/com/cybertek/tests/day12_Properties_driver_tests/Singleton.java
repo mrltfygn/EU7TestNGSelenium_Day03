@@ -15,7 +15,7 @@ public class Singleton {
             str="Singleton";
         }
         else{
-            //if it has just value just returnit
+            //if it has just value just return it
             System.out.println("it has value return same");
         }
         return str;

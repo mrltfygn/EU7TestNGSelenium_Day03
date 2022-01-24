@@ -7,6 +7,7 @@ public class ConfigurationReader {
     static {
         try{
             String path="configuration.properties";
+            //READ THE FILE INTO JAVA FINDS THE FILE THE STRING PATH
             FileInputStream input=new FileInputStream(path);
             properties=new Properties();
             properties.load(input);
@@ -16,6 +17,7 @@ public class ConfigurationReader {
         }
     }
     public static String get(String keyName){
+
         return properties.getProperty(keyName);
     }
 }
