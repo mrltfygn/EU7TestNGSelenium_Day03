@@ -1,4 +1,4 @@
-package com.cybertek.tests.day15_Review;
+package com.cybertek.tests.day15_Review_xmlRunner;
 
 import com.cybertek.pages.ContactInfoPage;
 import com.cybertek.pages.ContactsPage;

@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Vytrack Automation" verbose="1">
+    <test name="Vytrack Smoke Test">
+        <packages>
+            <package name="com.cybertek.tests.day14_extent_reports"></package>
+            <package name="com.cybertek.tests.day15_Review_xmlRunner.verifyContantInfoTest"></package>
+            <!--          <package name=".*"></package>  //we run all packages that has test annotation
+                    <classes>  // run only this classes
+                         <class name="com.cybertek.tests.day15_Review_xmlRunner.verifyContantInfoTest"></class>
+                     </classes>               -->
+       <!--     <classes>
+                <class name="com.cybertek.tests.day15_Review_xmlRunner">
+                    <methods>
+                        <include name="contentDetailsTest"></include>   //only test this ones
+                    </methods>
+                </class>
+            </classes>  -->
+        </packages>
+    </test>
+</suite> 
